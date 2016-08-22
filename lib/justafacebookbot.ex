@@ -5,7 +5,8 @@ defmodule Justafacebookbot do
     import Supervisor.Spec, warn: false
 
     children = [
-      Plug.Adapters.Cowboy.child_spec(:http, Justafacebookbot.Router, [], [port: System.get_env("PORT") || 4001])
+      Plug.Adapters.Cowboy.child_spec(:http, Justafacebookbot.Router, [],
+        [port: String.to_integer(System.get_env("PORT") || "4001")])
     ]
 
     opts = [strategy: :one_for_one, name: Justafacebookbot.Supervisor]
