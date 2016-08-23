@@ -13,6 +13,6 @@ cache:
 
 deploy:
   provider: heroku
-  app: justafacebookbot
+  app: justelixir
   api_key:
     secure: a0SYpWAYFsTj8jwBdJNjbN71RjfRf+rrKLVlQYHal+8+36eg6tXp2DqX6dDr0mrfgf0iK+KQjn26z4G6nxo/skwdDxVm56tHZ8U7iqu/ix+Ps0h3XfGNlxT3fjfDbhnpNsJcNLnt1/kHOIM3KtrkA8S2q6I/U2CwYSwRELwwSOfQvbz1Ue/35py3JcOtpijxWZS5X2JTTUqVj6f8PZCpanxYcXKvVb0zNSEHSXpUYkXYgr+cATqKjIiRFK9OMyZsMuQu/mNMDMykOCS+SZ+A916Uwqe++t0HN+jbZg8RsOOZDJcvBQNSTDdSaHJUg0j0rdHavLztUq+7phb17yGBUO2AxJHvvXbjztn+IDtqsSw6Y+BPfjY5bL9mM90SFptWQah6hrisFb+npFkH9YaeVoB6r9wUKM1Gtc/TKPfeoBqHHbwHqa/NbkEjkB2kaNN2Vdz/3qb84o7Wm8XFnBc3egyleCG4gosONJe9KFtOZrUj4oE+BAnKhJOWeQfg5unGvs0g5Ec6iveI853ODaQ3ZRqc5SRDbx+fWtqI7lJRWN5jYpehAd5ls/FUbRbTHia+lKWCe0HP5r+FtP4OUf3lxtFXbeTdjPzQ6UDZY/FAiGnzKUtBGk2adIB2at+zwv41Bv9yD/en3F5sntAwkYIChMkAV2BN1vtlpTuF9Qo0dQE=
