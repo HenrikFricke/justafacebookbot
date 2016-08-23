@@ -1,8 +1,8 @@
-defmodule Justafacebookbot.Mixfile do
+defmodule Justelixir.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :justafacebookbot,
+    [app: :justelixir,
      version: "0.1.0",
      elixir: "~> 1.3.2",
      build_embedded: Mix.env == :prod,
@@ -15,7 +15,7 @@ defmodule Justafacebookbot.Mixfile do
   # Type "mix help compile.app" for more information
   def application do
     [applications: [:logger, :cowboy, :plug, :poison, :httpotion],
-     mod: {Justafacebookbot, []}]
+     mod: {Justelixir, []}]
   end
 
   # Dependencies can be Hex packages:

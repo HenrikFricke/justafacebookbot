@@ -10,11 +10,11 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :justafacebookbot, key: :value
+#     config :justelixir, key: :value
 #
 # And access this configuration in your application as:
 #
-#     Application.get_env(:justafacebookbot, :key)
+#     Application.get_env(:justelixir, :key)
 #
 # Or configure a 3rd-party app:
 #

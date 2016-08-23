@@ -1,6 +1,6 @@
-defmodule JustafacebookbotTest do
+defmodule JustelixirTest do
   use ExUnit.Case
-  doctest Justafacebookbot
+  doctest Justelixir
 
   test "the truth" do
     assert 1 + 1 == 2
