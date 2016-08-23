@@ -1,26 +1,22 @@
 defmodule Justafacebookbot.Router do
   use Plug.Router
 
-  if Mix.env == :dev do
-    use Plug.Debugger
-  end
-
   plug :match
   plug :dispatch
 
+  @url "http://api.giphy.com/v1/gifs/"
+  @api_key "dc6zaTOxFJmzC"
+
   # Root path
   get "/" do
-    send_resp(conn, 200, "This entire website runs on Elixir plugs!...")
+    send_resp(conn, 200, "Here is nothing, but nice to see you ;)")
   end
 
-  get "/webhook" do
-    conn = Plug.Conn.fetch_query_params(conn)
-    if conn.params["hub.mode"] === "subscribe" &&
-      conn.params["hub.verify_token"] === System.get_env("VALIDATION") do
-        send_resp(conn, 200, conn.params["hub.challenge"])
-    else
-      send_resp(conn, 403, "Something went wrong.")
-    end
+  get "/gifs" do
+    response = HTTPotion.get "#{@url}random?api_key=#{@api_key}"
+    {:ok, body} = Poison.decode(response.body)
+    gif = HTTPotion.get body["data"]["image_original_url"]
+    send_resp(conn, 200, gif.body)
   end
 
   match _ do

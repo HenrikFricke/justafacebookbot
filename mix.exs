@@ -14,7 +14,7 @@ defmodule Justafacebookbot.Mixfile do
   #
   # Type "mix help compile.app" for more information
   def application do
-    [applications: [:logger, :cowboy, :plug, :poison],
+    [applications: [:logger, :cowboy, :plug, :poison, :httpotion],
      mod: {Justafacebookbot, []}]
   end
 
@@ -30,6 +30,7 @@ defmodule Justafacebookbot.Mixfile do
   defp deps do
     [{:cowboy, "~> 1.0.0"},
      {:plug, "~> 0.12"},
-     {:poison, "~> 1.4.0"}]
+     {:poison, "~> 1.4.0"},
+     {:httpotion, "~> 3.0.0"}]
   end
 end
