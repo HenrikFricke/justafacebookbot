@@ -12,12 +12,17 @@ defmodule Justelixir.GifsRouter do
     send_resp(conn, 200, HTTPotion.get(body["data"]["image_original_url"]).body)
   end
 
+  get "/:tag" do
+    {:ok, body} = requestGiphyAPI(tag)
+    send_resp(conn, 200, HTTPotion.get(body["data"]["image_original_url"]).body)
+  end
+
   match _ do
     send_resp(conn, 404, "oops")
   end
 
-  defp requestGiphyAPI do
-    HTTPotion.get("#{@url}random?api_key=#{@api_key}")
+  defp requestGiphyAPI(tag \\ "") do
+    HTTPotion.get("#{@url}random?api_key=#{@api_key}&tag=#{tag}")
     |> Map.get(:body)
     |> Poison.decode
   end

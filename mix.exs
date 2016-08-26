@@ -31,6 +31,7 @@ defmodule Justelixir.Mixfile do
     [{:cowboy, "~> 1.0.0"},
      {:plug, "~> 0.12"},
      {:poison, "~> 1.4.0"},
-     {:httpotion, "~> 3.0.0"}]
+     {:httpotion, "~> 3.0.0"},
+     {:mock, "~> 0.1.1", only: :test}]
   end
 end
